@@ -38,7 +38,7 @@ class LocalStorageUtils {
     }
 
     /**
-     * 移除localStorage中的数据s
+     * 移除localStorage中的数据
      * @param key
      */
     static removeItem(key) {
@@ -46,6 +46,13 @@ class LocalStorageUtils {
             throw Error("key is invalid");
         }
         window.localStorage.removeItem(key);
+    }
+
+    /**
+     * clear localStorage
+     */
+    static clear() {
+        window.localStorage.clear();
     }
 }
 
